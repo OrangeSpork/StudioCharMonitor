@@ -81,7 +81,7 @@ namespace StudioCharMonitor
             _state = Config.Bind("Options", "Show Misc State", true, "Blush, Gloss, Wetness, etc");        
             _look = Config.Bind("Options", "Show Eye/Neck Look State", true, "Show Eye and Neck Controller States");
 
-        _position.SettingChanged += (sender, args) => UpdateLooks();
+            _position.SettingChanged += (sender, args) => UpdateLooks();
             _monitorColor.SettingChanged += (sender, args) => UpdateLooks();
             _shown.SettingChanged += (sender, args) =>
             {
@@ -127,6 +127,12 @@ namespace StudioCharMonitor
 
         private void LateUpdate()
         {
+            if (!_shown.Value)
+            {
+                _frameOutputText = null;
+                return;
+            }
+
             IEnumerable<OCIChar> characters = KKAPI.Studio.StudioAPI.GetSelectedCharacters();
             OCIChar selectedCharacter = characters.FirstOrDefault();
             if (selectedCharacter != null)
@@ -332,7 +338,7 @@ namespace StudioCharMonitor
             }
         }
 
-        private static void UpdateLooks()
+        private void UpdateLooks()
         {
             if (_monitorColor.Value == CounterColors.White)
                 _style.normal.textColor = Color.white;
@@ -349,9 +355,7 @@ namespace StudioCharMonitor
         private void OnEnable()
         {
             if (_shown != null && _shown.Value)
-            {
                 UpdateLooks();
-            }
         }
 
         private void OnDisable()
@@ -364,12 +368,15 @@ namespace StudioCharMonitor
                 DrawMonitor();
         }
 
-        private static void DrawMonitor()
+        private void DrawMonitor()
         {
-            if (_monitorColor.Value == CounterColors.Outline)
-                ShadowAndOutline.DrawOutline(_screenRect, _frameOutputText, _style, Color.black, Color.white, 1.5f);
-            else
-                GUI.Label(_screenRect, _frameOutputText, _style);
+            if (_frameOutputText != null)
+            {
+                if (_monitorColor.Value == CounterColors.Outline)
+                    ShadowAndOutline.DrawOutline(_screenRect, _frameOutputText, _style, Color.black, Color.white, 1.5f);
+                else
+                    GUI.Label(_screenRect, _frameOutputText, _style);
+            }
         }
 
     }
