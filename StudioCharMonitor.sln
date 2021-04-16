@@ -7,9 +7,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "StudioCharMonitor", "Studio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS2_StudioCharMonitor", "HS2_StudioCharMonitor\HS2_StudioCharMonitor.csproj", "{09326D62-665F-4C33-9096-465D6A7738A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_StudioCharMonitor", "AI_StudioCharMonitor\AI_StudioCharMonitor.csproj", "{0EB24963-4CAF-4317-A5CF-E52D8F4367A3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		StudioCharMonitor\StudioCharMonitor.projitems*{09326d62-665f-4c33-9096-465d6a7738a2}*SharedItemsImports = 4
+		StudioCharMonitor\StudioCharMonitor.projitems*{0eb24963-4caf-4317-a5cf-e52d8f4367a3}*SharedItemsImports = 4
 		StudioCharMonitor\StudioCharMonitor.projitems*{69cd6d61-9bc0-4357-8c88-93eff122eb49}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +24,10 @@ Global
 		{09326D62-665F-4C33-9096-465D6A7738A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09326D62-665F-4C33-9096-465D6A7738A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09326D62-665F-4C33-9096-465D6A7738A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB24963-4CAF-4317-A5CF-E52D8F4367A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB24963-4CAF-4317-A5CF-E52D8F4367A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB24963-4CAF-4317-A5CF-E52D8F4367A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB24963-4CAF-4317-A5CF-E52D8F4367A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
