@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "StudioCharMonitor", "StudioCharMonitor\StudioCharMonitor.shproj", "{69CD6D61-9BC0-4357-8C88-93EFF122EB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS2_StudioCharMonitor", "HS2_StudioCharMonitor\HS2_StudioCharMonitor.csproj", "{09326D62-665F-4C33-9096-465D6A7738A2}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		StudioCharMonitor\StudioCharMonitor.projitems*{09326d62-665f-4c33-9096-465d6a7738a2}*SharedItemsImports = 4
+		StudioCharMonitor\StudioCharMonitor.projitems*{69cd6d61-9bc0-4357-8c88-93eff122eb49}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09326D62-665F-4C33-9096-465D6A7738A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09326D62-665F-4C33-9096-465D6A7738A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09326D62-665F-4C33-9096-465D6A7738A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09326D62-665F-4C33-9096-465D6A7738A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37903BB2-2D9B-47C9-8C54-ECDA23E74975}
+	EndGlobalSection
+EndGlobal
