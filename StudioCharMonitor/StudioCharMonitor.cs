@@ -21,7 +21,7 @@ namespace StudioCharMonitor
     [BepInDependency(KoikatuAPI.GUID, KoikatuAPI.VersionConst)]
     public class StudioCharMonitor : BaseUnityPlugin
     {
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.0.1";
         public const string GUID = "orange.spork.studiocharmon";
         public const string NAME = "Studio Character Monitor";
 
@@ -137,7 +137,7 @@ namespace StudioCharMonitor
             OCIChar selectedCharacter = characters.FirstOrDefault();
             if (selectedCharacter != null)
             {
-                fString.Append($"Name: {selectedCharacter.charInfo.fileParam.fullname} Show: {selectedCharacter.charInfo.enabled} Pos: {selectedCharacter.charInfo.gameObject.transform.position} Rot: {selectedCharacter.charInfo.gameObject.transform.rotation.eulerAngles}\n");
+                fString.Append($"Name: {selectedCharacter.charInfo.fileParam.fullname} Show: {selectedCharacter.charInfo.visibleAll} Pos: {selectedCharacter.charInfo.gameObject.transform.position} Rot: {selectedCharacter.charInfo.gameObject.transform.rotation.eulerAngles}\n");
                 // Kinematics
                 if (_kinematics.Value)
                 {
